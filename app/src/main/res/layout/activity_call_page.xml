@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".CallPageActivity"
+    android:orientation="vertical"
+    android:weightSum="3">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="20dp"
+      android:layout_weight="1">
+
+
+    <TextureView
+        android:id="@+id/preview"
+        android:layout_width="342dp"
+        android:layout_height="432dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/white" />
+
+    <TextureView
+        android:id="@+id/remoteUserView"
+        android:layout_width="90dp"
+        android:layout_height="109dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/preview"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:background="@color/black" />
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="2"
+      android:background="#353535"
+      android:orientation="vertical"
+      android:layout_margin="20dp"
+      android:weightSum="5">
+
+    <TextView
+        android:background="#262626"
+        android:layout_margin="15dp"
+        android:layout_weight="2"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/montserrat"
+        android:text="We sign for human rights"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/line"
+         />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_weight="2">
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/floatingActionButton2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:backgroundTint="#9747FF"
+          android:src="@drawable/muteicon"
+          app:layout_constraintEnd_toStartOf="@+id/floatingActionButton"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/floatingActionButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:backgroundTint="#9747FF"
+          android:src="@drawable/translateicon"
+          app:layout_constraintEnd_toStartOf="@+id/floatingActionButton3"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toEndOf="@+id/floatingActionButton2"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/floatingActionButton3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:backgroundTint="#C41919"
+          android:src="@drawable/cutcallicon"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
+          app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </LinearLayout>
+</LinearLayout>

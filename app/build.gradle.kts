@@ -1,10 +1,21 @@
+import com.android.build.gradle.internal.testing.screenshot.PROPERTIES
+import org.gradle.api.internal.properties.GradleProperties
+import java.util.Properties
+
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
 }
 
+val localPropertiesFile = rootProject.file("local.properties")
+val localProperties = Properties()
+
+localPropertiesFile.inputStream().use { input ->
+    localProperties.load(input)
+}
 android {
+    android.buildFeatures.buildConfig =  true
     namespace = "com.example.mutalk"
     compileSdk = 34
 
@@ -16,6 +27,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "ZEGO_APP_SIGN", localProperties.getProperty("ZEGO_APP_SIGN"))
+        buildConfigField("String", "ZEGO_APP_ID", localProperties.getProperty("ZEGO_APP_ID"))
+
     }
 
     buildTypes {
@@ -45,6 +60,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation("com.github.ZEGOCLOUD:zego_uikit_prebuilt_call_android:+")
+    implementation("im.zego:express-video:3.12.4")
 
 }
