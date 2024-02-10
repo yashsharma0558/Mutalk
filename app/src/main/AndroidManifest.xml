@@ -32,6 +32,9 @@
         android:theme="@style/Theme.Mutalk"
         tools:targetApi="31">
         <activity
+            android:name=".RegisterUserActivity"
+            android:exported="false" />
+        <activity
             android:name=".ContactProfileActivity"
             android:exported="false" />
         <activity

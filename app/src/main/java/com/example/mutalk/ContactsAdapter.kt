@@ -9,7 +9,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ContactsAdapter(private val contactsList: List<Contact>) :
+class ContactsAdapter(private val contactsList: List<Contact>, private val extraID: String, private val extraName: String) :
     RecyclerView.Adapter<ContactsAdapter.ContactViewHolder>() {
 
     inner class ContactViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -25,6 +25,8 @@ class ContactsAdapter(private val contactsList: List<Contact>) :
                     val intent = Intent(itemView.context, ContactProfileActivity::class.java).apply {
                         putExtra("contact_name", contact.name)
                         putExtra("contact_phone", contact.phoneNumber)
+                        putExtra("userID", extraID)
+                        putExtra("userName", extraName)
                     }
                     itemView.context.startActivity(intent)
                 }

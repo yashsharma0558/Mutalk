@@ -11,6 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.ViewModelProvider
 import im.zego.zegoexpress.ZegoExpressEngine
 import im.zego.zegoexpress.constants.ZegoScenario
 import im.zego.zegoexpress.entity.ZegoEngineProfile
@@ -23,14 +24,20 @@ class ContactProfileActivity : AppCompatActivity() {
     private lateinit var shareCodeWhatsApp: Button
     private lateinit var shareCodeText: Button
     private lateinit var roomCodeTextView: TextView
+    private lateinit var sharedViewModel: SharedViewModel
+    private lateinit var extraID: String
+    private lateinit var extraName: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         createEngine()
         val roomID = generateID(10)
         setContentView(R.layout.activity_contact_profile)
+        sharedViewModel= ViewModelProvider(this)[SharedViewModel::class.java]
 
         val contactName = intent.getStringExtra("contact_name")
         val contactPhone = intent.getStringExtra("contact_phone")
+        extraID = intent.getStringExtra("userID").toString()
+        extraName = intent.getStringExtra("userName").toString()
 
         findViewById<TextView>(R.id.textView2).text = contactName
         findViewById<TextView>(R.id.textView3).text = contactPhone
@@ -50,8 +57,8 @@ class ContactProfileActivity : AppCompatActivity() {
             }
             else{
                 intent = Intent(this, CallPageActivity::class.java)
-                intent.putExtra("userID", contactPhone)
-                intent.putExtra("userName", contactName)
+                intent.putExtra("userID", extraID)
+                intent.putExtra("userName", extraName)
                 intent.putExtra("roomID", roomID)
                 startActivity(intent)
             }

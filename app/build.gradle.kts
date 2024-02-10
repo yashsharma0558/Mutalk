@@ -61,5 +61,6 @@ dependencies {
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation("im.zego:express-video:3.12.4")
+    implementation("com.googlecode.libphonenumber:libphonenumber:8.12.34")
 
 }

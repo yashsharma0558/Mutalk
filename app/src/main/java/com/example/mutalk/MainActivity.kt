@@ -14,6 +14,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import im.zego.zegoexpress.ZegoExpressEngine
 import im.zego.zegoexpress.constants.ZegoScenario
@@ -23,14 +24,24 @@ import java.util.Random
 
 class MainActivity : AppCompatActivity() {
     private lateinit var button: FloatingActionButton
+    private lateinit var sharedViewModel: SharedViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         button = findViewById(R.id.call)
+        sharedViewModel= ViewModelProvider(this)[SharedViewModel::class.java]
         button.setOnClickListener{
-            intent = Intent(this, ContactActivity::class.java)
-            startActivity(intent)
+
+            if(sharedViewModel.currentUserName.isNotEmpty()){
+                intent = Intent(this, ContactActivity::class.java)
+                startActivity(intent)
+            }
+            else{
+                intent = Intent(this, RegisterUserActivity::class.java)
+                startActivity(intent)
+            }
+
         }
         changeWelcomeTextColor()
 
