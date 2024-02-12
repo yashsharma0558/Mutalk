@@ -62,5 +62,6 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation("im.zego:express-video:3.12.4")
     implementation("com.googlecode.libphonenumber:libphonenumber:8.12.34")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 
 }

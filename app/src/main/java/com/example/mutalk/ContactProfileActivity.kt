@@ -7,11 +7,15 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CircleCrop
+import com.bumptech.glide.request.RequestOptions
 import im.zego.zegoexpress.ZegoExpressEngine
 import im.zego.zegoexpress.constants.ZegoScenario
 import im.zego.zegoexpress.entity.ZegoEngineProfile
@@ -32,15 +36,24 @@ class ContactProfileActivity : AppCompatActivity() {
         createEngine()
         val roomID = generateID(10)
         setContentView(R.layout.activity_contact_profile)
-        sharedViewModel= ViewModelProvider(this)[SharedViewModel::class.java]
+        sharedViewModel = ViewModelProvider(this)[SharedViewModel::class.java]
 
         val contactName = intent.getStringExtra("contact_name")
         val contactPhone = intent.getStringExtra("contact_phone")
+        val contactPhoto = intent.getStringExtra("contact_photo")
         extraID = intent.getStringExtra("userID").toString()
         extraName = intent.getStringExtra("userName").toString()
 
         findViewById<TextView>(R.id.textView2).text = contactName
         findViewById<TextView>(R.id.textView3).text = contactPhone
+        if (contactPhoto != "") {
+            Glide.with(findViewById<ImageView>(R.id.imageView).context)
+                .load(Uri.parse(contactPhoto))
+                .apply(RequestOptions().transforms(CircleCrop()))
+                .into(findViewById<ImageView>(R.id.imageView))
+
+
+        }
 
         makeVideoCall = findViewById(R.id.button2)
         shareCodeText = findViewById(R.id.button4)
@@ -48,14 +61,22 @@ class ContactProfileActivity : AppCompatActivity() {
         roomCodeTextView = findViewById(R.id.textView4)
         roomCodeTextView.text = roomID
 
-        ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.CAMERA), MY_CAMERA_REQUEST_CODE)
+        ActivityCompat.requestPermissions(
+            this,
+            arrayOf(android.Manifest.permission.CAMERA),
+            MY_CAMERA_REQUEST_CODE
+        )
 
         makeVideoCall.setOnClickListener {
             if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA)
-                == PackageManager.PERMISSION_DENIED){
-                ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.CAMERA), MY_CAMERA_REQUEST_CODE)
-            }
-            else{
+                == PackageManager.PERMISSION_DENIED
+            ) {
+                ActivityCompat.requestPermissions(
+                    this,
+                    arrayOf(android.Manifest.permission.CAMERA),
+                    MY_CAMERA_REQUEST_CODE
+                )
+            } else {
                 intent = Intent(this, CallPageActivity::class.java)
                 intent.putExtra("userID", extraID)
                 intent.putExtra("userName", extraName)
@@ -72,16 +93,14 @@ class ContactProfileActivity : AppCompatActivity() {
         }
 
 
-
     }
-
-
 
 
     override fun onDestroy() {
         super.onDestroy()
         destroyEngine()
     }
+
     private fun generateID(limit: Int): String {
         val builder = StringBuilder()
         val random = Random()
@@ -118,7 +137,8 @@ class ContactProfileActivity : AppCompatActivity() {
             startActivity(intent)
         } catch (ex: ActivityNotFoundException) {
             // Handle cases where WhatsApp is not installed on the device
-            Toast.makeText(this, "WhatsApp is not installed on this device", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "WhatsApp is not installed on this device", Toast.LENGTH_SHORT)
+                .show()
         }
     }
 
@@ -139,7 +159,6 @@ class ContactProfileActivity : AppCompatActivity() {
     private fun destroyEngine() {
         ZegoExpressEngine.destroyEngine(null)
     }
-
 
 
 }

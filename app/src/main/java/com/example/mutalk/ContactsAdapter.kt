@@ -2,12 +2,17 @@ package com.example.mutalk
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CircleCrop
+import com.bumptech.glide.request.RequestOptions
 
 class ContactsAdapter(private val contactsList: List<Contact>, private val extraID: String, private val extraName: String) :
     RecyclerView.Adapter<ContactsAdapter.ContactViewHolder>() {
@@ -15,7 +20,7 @@ class ContactsAdapter(private val contactsList: List<Contact>, private val extra
     inner class ContactViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView = itemView.findViewById(R.id.nameTextView)
         val phoneNumberTextView: TextView = itemView.findViewById(R.id.phoneNumberTextView)
-        val contact: LinearLayout = itemView.findViewById(R.id.linearLayout)
+        val profilePictureImageView: ImageView = itemView.findViewById(R.id.profileImageView)
 
         init {
             itemView.setOnClickListener {
@@ -25,6 +30,7 @@ class ContactsAdapter(private val contactsList: List<Contact>, private val extra
                     val intent = Intent(itemView.context, ContactProfileActivity::class.java).apply {
                         putExtra("contact_name", contact.name)
                         putExtra("contact_phone", contact.phoneNumber)
+                        putExtra("contact_photo", contact.profilePicture)
                         putExtra("userID", extraID)
                         putExtra("userName", extraName)
                     }
@@ -46,7 +52,12 @@ class ContactsAdapter(private val contactsList: List<Contact>, private val extra
         val contact = contactsList[position]
         holder.nameTextView.text = contact.name
         holder.phoneNumberTextView.text = contact.phoneNumber
-
+        if(contact.profilePicture!=""){
+            Glide.with(holder.profilePictureImageView.context)
+                .load(Uri.parse(contact.profilePicture))
+                .apply(RequestOptions().transforms(CircleCrop()))
+                .into(holder.profilePictureImageView)
+        }
 
 
     }
