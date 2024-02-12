@@ -19,6 +19,9 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import im.zego.zegoexpress.ZegoExpressEngine
+import im.zego.zegoexpress.constants.ZegoScenario
+import im.zego.zegoexpress.entity.ZegoEngineProfile
 
 class ContactActivity : AppCompatActivity() {
 
@@ -27,6 +30,7 @@ class ContactActivity : AppCompatActivity() {
         const val PICK_CONTACT_REQUEST = 1
     }
 
+    private val MY_CAMERA_REQUEST_CODE = 100
     private lateinit var textView: TextView
     private lateinit var addContact: Button
     private lateinit var joinRoom: Button
@@ -74,6 +78,8 @@ class ContactActivity : AppCompatActivity() {
 
         joinRoom.setOnClickListener {
             val roomID = roomField.text.toString()
+            createEngine()
+            ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.CAMERA), MY_CAMERA_REQUEST_CODE)
             val intent = Intent(this, CallPageActivity::class.java)
             intent.putExtra("userID", extraID)
             intent.putExtra("userName", extraName)
@@ -81,7 +87,10 @@ class ContactActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
+    override fun onDestroy() {
+        super.onDestroy()
+        destroyEngine()
+    }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -166,6 +175,23 @@ class ContactActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
     }
 
+    private fun createEngine() {
+        val profile = ZegoEngineProfile()
+
+        // Get your AppID and AppSign from ZEGOCLOUD Console
+        //[My Projects -> AppID] : https://console.zegocloud.com/project
+        profile.appID = BuildConfig.ZEGO_APP_ID.toLong()
+        profile.appSign = BuildConfig.ZEGO_APP_SIGN
+        profile.scenario = ZegoScenario.DEFAULT // General scenario.
+        profile.application = application
+        ZegoExpressEngine.createEngine(profile, null)
+    }
+
+
+    // destroy engine
+    private fun destroyEngine() {
+        ZegoExpressEngine.destroyEngine(null)
+    }
 
 
 }
