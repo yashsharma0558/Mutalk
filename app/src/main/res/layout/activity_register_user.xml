@@ -28,19 +28,21 @@
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.315"
+        app:layout_constraintVertical_bias="0.189"
         tools:text="Let's finish\nsetting\nup..." />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailTextField"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_gravity="start"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="40dp"
         android:hint="Name"
         app:boxStrokeColor="#1976D2"
         app:hintTextColor="#1976D2"
@@ -53,18 +55,20 @@
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="textPersonName"
-            android:fontFamily="@font/montserrat" />
+            android:fontFamily="@font/montserrat"
+            android:inputType="textPersonName" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/phoneTextField"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="15dp"
         android:layout_gravity="start"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
         android:hint="Phone No."
         app:boxStrokeColor="#1976D2"
         app:hintTextColor="#1976D2"
@@ -77,8 +81,8 @@
             android:id="@+id/phone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="phone"
-            android:fontFamily="@font/montserrat"/>
+            android:fontFamily="@font/montserrat"
+            android:inputType="phone" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
