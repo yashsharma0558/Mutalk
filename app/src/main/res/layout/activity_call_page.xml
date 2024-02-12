@@ -42,7 +42,7 @@
 
   <LinearLayout
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
+      android:layout_height="250dp"
       android:layout_weight="2"
       android:background="@drawable/shape"
       android:orientation="vertical"
@@ -50,14 +50,14 @@
       android:weightSum="5">
 
     <TextView
-        android:background="@drawable/shape2"
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:layout_gravity="center"
         android:layout_margin="15dp"
         android:layout_weight="2"
-        android:padding="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:background="@drawable/shape2"
         android:fontFamily="@font/montserrat"
+        android:padding="15dp"
         android:text="We sign for human rights"
         android:textColor="@color/white" />
 
