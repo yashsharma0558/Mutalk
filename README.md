@@ -37,7 +37,7 @@ Through secure login procedures, users can trust that their conversations remain
 
 ## Future of Mutalk
 
-1. Real-time Sign Language Translation:
+1. Real-time word to word Translation:
    - Mutalk utilizes AI algorithms to translate sign language gestures into spoken words in real-time.
    - This feature enables mute and deaf individuals to communicate effectively with others, bridging the gap between sign language users and those unfamiliar with it.
 
@@ -49,11 +49,7 @@ Through secure login procedures, users can trust that their conversations remain
    - Mutalk seamlessly integrates with various communication devices commonly used by mute and deaf individuals.
    - This integration ensures accessibility and convenience, allowing users to leverage their preferred devices for effective communication.
 
-4. Speech-to-Text and Text-to-Speech Functionalities:
-   - Mutalk includes speech-to-text and text-to-speech functionalities to facilitate communication between mute, deaf users, and the general population.
-   - Mute individuals can input text which is then converted into spoken words, while deaf users can receive spoken words as text, ensuring inclusivity in everyday interactions.
-
-5. Future Integration with Gemini for Sentence Completion and Recognition:
+4. Future Integration with Gemini for Sentence Completion and Recognition:
    - In future developments, Mutalk aims to integrate Gemini technology for enhanced communication.
    - Gemini's sentence completion and recognition capabilities will further improve the efficiency and accuracy of communication for mute and deaf users, promoting inclusivity and 
 accessibility.
