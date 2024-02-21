@@ -72,6 +72,6 @@ git clone (https://github.com/yashsharma0558/Mutalk)
 
 7) Select a contact from your contact list and share them a randomly generated room ID through WhatsApp or SMS.
 
-8) That's it! Once your contact joins the room, You can now start video calling. 
+8) That's it! Once your contact joins the room, You can now start video calling with your mute-deaf friend. 
 
 Thank you for using Mutalk!
