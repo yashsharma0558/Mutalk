@@ -12,10 +12,11 @@ Through secure login procedures, users can trust that their conversations remain
 - Voice-to-Text for Enhanced Accessibility: Mutalk offers an additional feature of converting spoken words into text, catering to deaf users. This feature ensures inclusivity by allowing all participants to communicate effectively during video calls, regardless of their hearing abilities.
 
 ## Demonstration
-- Check out our [Demonstration Video](https://youtu.be/8QsPnnlwyS4) to see how Mutalk works.
+- Check out our [Demonstration Video]() to see how Mutalk works.
 
 ## Installation
-- To install the app, download the [APK File](https://github.com/UtkarshSingh5474/CAREitable-Solution_Challenge/blob/main/app-debug.apk) and install it on your Android device.
+- To install the app, download the APK and install it on your Android device.
+  https://drive.google.com/file/d/1D0dnWWHKUe0a9FB0Vy-fQ9JM3Ui8BuOu/view?usp=sharing
 
 ## Technologies Used
 
@@ -32,51 +33,42 @@ Through secure login procedures, users can trust that their conversations remain
 - Colab: Colab allowed us to write and execute arbitrary python code through the browser, and is especially well suited to machine learning.
 
 ## App Previews
-<img src="https://github.com/UtkarshSingh5474/CAREitable-Solution_Challenge/blob/1.1/MergedImages.png" height="895.94229035167px" width="950px">
-UPDATE THEM
+![work flow](https://github.com/yashsharma0558/Mutalk/assets/114309236/466d930a-55c7-4b38-9ba0-0e359342b627)
 
 ## Future of Mutalk
 
-- Implementing a Paid Delivery Service: Introducing an option for organizations to offer paid delivery services for donated items would provide a convenient and reliable way to transport items from donors to NGOs or organizations. This feature would further streamline the donation process and increase the efficiency of delivering donated goods.
+1. Real-time word to word Translation:
+   - Mutalk utilizes AI algorithms to translate sign language gestures into spoken words in real-time.
+   - This feature enables mute and deaf individuals to communicate effectively with others, bridging the gap between sign language users and those unfamiliar with it.
 
-- Improving the Chatbot Experience: We plan to enhance our AI chatbot, CAREtaker, by giving it access to more data, including user data. This will enable the chatbot to provide more accurate and personalized insights, recommendations, and support to users. By leveraging user data, the chatbot can better understand user preferences and tailor its responses accordingly.
+2. Visual Representations of Spoken Words in VR:
+   - Within the virtual reality (VR) environment, Mutalk employs augmented reality (AR) technology to visually represent spoken words.
+   - Deaf individuals can perceive and understand spoken language through visual cues, enhancing their communication experience within immersive VR settings.
 
-- Implementing Global Coverage: Expanding our app's reach to every country, state, and city would enable users from around the world to access and benefit from our platform. This global expansion would help us connect a larger audience with charitable causes and organizations, fostering a global community of donors.
+3. Seamless Integration with Existing Communication Devices:
+   - Mutalk seamlessly integrates with various communication devices commonly used by mute and deaf individuals.
+   - This integration ensures accessibility and convenience, allowing users to leverage their preferred devices for effective communication.
 
-- Language Translations: Adding language translation capabilities to our app would ensure that users from different linguistic backgrounds can easily navigate and interact with the platform. This feature would remove language barriers and make our solution more accessible and inclusive.
-
-- Enhanced User Verification: Implementing a more robust user registration process, such as linking national identity verification, would help reduce fraud and spam donation ads. This additional layer of verification would ensure that the platform maintains a trusted environment for donors and organizations.
-
-- Smart Categories that will give more personalized fields to be filled by the donor according to the category. For example, for food items, fields like expiry date, type. Size and gender for clothes, etc.
-
-- Image Recognition: We can use machine learning to recognize the items that users are donating by analyzing the images uploaded by users. This can be done by using various image recognition APIs and libraries such as TensorFlow and Google Cloud Vision API. This can help in improving the accuracy of the donated item's category and description.
-
-- Fraud Detection: Machine learning can be used to detect fraudulent donations by analyzing user behavior patterns and other data. By identifying and blocking fraudulent donations, we can ensure the transparency and authenticity of the platform.
-
-- Natural Language Processing: We can use Natural Language Processing (NLP) to understand the user's descriptions of donated items better. This can help in categorizing and sorting items more accurately, improving the search feature, and enhancing the overall user experience.
-
+4. Future Integration with Gemini for Sentence Completion and Recognition:
+   - In future developments, Mutalk aims to integrate Gemini technology for enhanced communication.
+   - Gemini's sentence completion and recognition capabilities will further improve the efficiency and accuracy of communication for mute and deaf users, promoting inclusivity and 
+accessibility.
+     
 ## How to Use
 To use Mutalk, follow these steps:
 
 1) Clone the repository to your local machine using git:
-git clone https://github.com/UtkarshSingh5474/CAREitable-Solution_Challenge.git
+git clone (https://github.com/yashsharma0558/Mutalk)
 
-2) Open Android Studio and select "Open an existing Android Studio project". Navigate to the cloned repository directory and select it to open the project.
+3) Open Android Studio and select "Open an existing Android Studio project". Navigate to the cloned repository directory and select it to open the project.
 
-3) Wait for the project to build and sync all dependencies.
+4) Wait for the project to build and sync all dependencies.
 
-4) Connect your Android device to your computer and enable USB debugging on the device.
+5) Connect your Android device to your computer and enable USB debugging on the device.
 
-5) In Android Studio, click on the "Run" button to run the app on your device.
+6) In Android Studio, click on the "Run" button to run the app on your device.
 
-6) Once the app is installed and running, create an account using your email and password.
-
-7) To donate an item, click on the "Donate" button on the home screen, and fill in the details about the item you want to donate.
-
-8) Once you submit the item for donation, it will be visible to all the local NGOs, and the NGO owner can directly contact you and schedule a pickup.
-
-That's it! You can now start donating items to those in need through CAREitable.
-
+That's it! You can now start video calling.
 
 
 Thank you for using Mutalk!
