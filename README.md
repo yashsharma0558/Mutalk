@@ -58,24 +58,17 @@ accessibility.
 To use Mutalk, follow these steps:
 
 1) Clone the repository to your local machine using git:
-git clone https://github.com/UtkarshSingh5474/CAREitable-Solution_Challenge.git
+git clone (https://github.com/yashsharma0558/Mutalk)
 
-2) Open Android Studio and select "Open an existing Android Studio project". Navigate to the cloned repository directory and select it to open the project.
+3) Open Android Studio and select "Open an existing Android Studio project". Navigate to the cloned repository directory and select it to open the project.
 
-3) Wait for the project to build and sync all dependencies.
+4) Wait for the project to build and sync all dependencies.
 
-4) Connect your Android device to your computer and enable USB debugging on the device.
+5) Connect your Android device to your computer and enable USB debugging on the device.
 
-5) In Android Studio, click on the "Run" button to run the app on your device.
-
-6) Once the app is installed and running, create an account using your email and password.
-
-7) To donate an item, click on the "Donate" button on the home screen, and fill in the details about the item you want to donate.
-
-8) Once you submit the item for donation, it will be visible to all the local NGOs, and the NGO owner can directly contact you and schedule a pickup.
+6) In Android Studio, click on the "Run" button to run the app on your device.
 
 That's it! You can now start donating items to those in need through CAREitable.
-
 
 
 Thank you for using Mutalk!
