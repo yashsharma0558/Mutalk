@@ -12,10 +12,10 @@ Through secure login procedures, users can trust that their conversations remain
 - Voice-to-Text for Enhanced Accessibility: Mutalk offers an additional feature of converting spoken words into text, catering to deaf users. This feature ensures inclusivity by allowing all participants to communicate effectively during video calls, regardless of their hearing abilities.
 
 ## Demonstration
-- Check out our [Demonstration Video](https://youtu.be/8QsPnnlwyS4) to see how Mutalk works.
+- Check out our [Demonstration Video]() to see how Mutalk works.
 
 ## Installation
-- To install the app, download the [APK File](https://github.com/UtkarshSingh5474/CAREitable-Solution_Challenge/blob/main/app-debug.apk) and install it on your Android device.
+- To install the app, download the  and install it on your Android device.
 
 ## Technologies Used
 
@@ -32,8 +32,7 @@ Through secure login procedures, users can trust that their conversations remain
 - Colab: Colab allowed us to write and execute arbitrary python code through the browser, and is especially well suited to machine learning.
 
 ## App Previews
-<img src="https://github.com/UtkarshSingh5474/CAREitable-Solution_Challenge/blob/1.1/MergedImages.png" height="895.94229035167px" width="950px">
-UPDATE THEM
+![work flow](https://github.com/yashsharma0558/Mutalk/assets/114309236/466d930a-55c7-4b38-9ba0-0e359342b627)
 
 ## Future of Mutalk
 
