@@ -6,6 +6,7 @@ import java.util.Properties
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
+    id("com.google.gms.google-services")
 }
 
 val localPropertiesFile = rootProject.file("local.properties")
@@ -25,7 +26,6 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "ZEGO_APP_SIGN", localProperties.getProperty("ZEGO_APP_SIGN"))
@@ -49,6 +49,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        mlModelBinding = true
+    }
 }
 
 dependencies {
@@ -57,11 +60,13 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
+    implementation(libs.androidx.camera.core)
     implementation("im.zego:express-video:3.12.4")
     implementation("com.googlecode.libphonenumber:libphonenumber:8.12.34")
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation("com.microsoft.onnxruntime:onnxruntime-android:latest.release")
+    implementation(libs.firebase.auth)
+    implementation(libs.androidx.junit.ktx)
+    androidTestImplementation("org.testng:testng:6.9.6")
 
 }
