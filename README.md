@@ -68,7 +68,7 @@ git clone (https://github.com/yashsharma0558/Mutalk)
 
 6) In Android Studio, click on the "Run" button to run the app on your device.
 
-That's it! You can now start donating items to those in need through CAREitable.
+That's it! You can now start video calling.
 
 
 Thank you for using Mutalk!
