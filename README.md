@@ -37,24 +37,27 @@ Through secure login procedures, users can trust that their conversations remain
 
 ## Future of Mutalk
 
-- Implementing a Paid Delivery Service: Introducing an option for organizations to offer paid delivery services for donated items would provide a convenient and reliable way to transport items from donors to NGOs or organizations. This feature would further streamline the donation process and increase the efficiency of delivering donated goods.
+1. Real-time Sign Language Translation:
+   - Mutalk utilizes AI algorithms to translate sign language gestures into spoken words in real-time.
+   - This feature enables mute and deaf individuals to communicate effectively with others, bridging the gap between sign language users and those unfamiliar with it.
 
-- Improving the Chatbot Experience: We plan to enhance our AI chatbot, CAREtaker, by giving it access to more data, including user data. This will enable the chatbot to provide more accurate and personalized insights, recommendations, and support to users. By leveraging user data, the chatbot can better understand user preferences and tailor its responses accordingly.
+2. Visual Representations of Spoken Words in VR:
+   - Within the virtual reality (VR) environment, Mutalk employs augmented reality (AR) technology to visually represent spoken words.
+   - Deaf individuals can perceive and understand spoken language through visual cues, enhancing their communication experience within immersive VR settings.
 
-- Implementing Global Coverage: Expanding our app's reach to every country, state, and city would enable users from around the world to access and benefit from our platform. This global expansion would help us connect a larger audience with charitable causes and organizations, fostering a global community of donors.
+3. Seamless Integration with Existing Communication Devices:
+   - Mutalk seamlessly integrates with various communication devices commonly used by mute and deaf individuals.
+   - This integration ensures accessibility and convenience, allowing users to leverage their preferred devices for effective communication.
 
-- Language Translations: Adding language translation capabilities to our app would ensure that users from different linguistic backgrounds can easily navigate and interact with the platform. This feature would remove language barriers and make our solution more accessible and inclusive.
+4. Speech-to-Text and Text-to-Speech Functionalities:
+   - Mutalk includes speech-to-text and text-to-speech functionalities to facilitate communication between mute, deaf users, and the general population.
+   - Mute individuals can input text which is then converted into spoken words, while deaf users can receive spoken words as text, ensuring inclusivity in everyday interactions.
 
-- Enhanced User Verification: Implementing a more robust user registration process, such as linking national identity verification, would help reduce fraud and spam donation ads. This additional layer of verification would ensure that the platform maintains a trusted environment for donors and organizations.
-
-- Smart Categories that will give more personalized fields to be filled by the donor according to the category. For example, for food items, fields like expiry date, type. Size and gender for clothes, etc.
-
-- Image Recognition: We can use machine learning to recognize the items that users are donating by analyzing the images uploaded by users. This can be done by using various image recognition APIs and libraries such as TensorFlow and Google Cloud Vision API. This can help in improving the accuracy of the donated item's category and description.
-
-- Fraud Detection: Machine learning can be used to detect fraudulent donations by analyzing user behavior patterns and other data. By identifying and blocking fraudulent donations, we can ensure the transparency and authenticity of the platform.
-
-- Natural Language Processing: We can use Natural Language Processing (NLP) to understand the user's descriptions of donated items better. This can help in categorizing and sorting items more accurately, improving the search feature, and enhancing the overall user experience.
-
+5. Future Integration with Gemini for Sentence Completion and Recognition:
+   - In future developments, Mutalk aims to integrate Gemini technology for enhanced communication.
+   - Gemini's sentence completion and recognition capabilities will further improve the efficiency and accuracy of communication for mute and deaf users, promoting inclusivity and 
+accessibility.
+     
 ## How to Use
 To use Mutalk, follow these steps:
 
