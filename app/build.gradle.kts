@@ -67,6 +67,8 @@ dependencies {
     implementation("com.microsoft.onnxruntime:onnxruntime-android:latest.release")
     implementation(libs.firebase.auth)
     implementation(libs.androidx.junit.ktx)
+    implementation(libs.tensorflow.lite.support)
+    implementation(libs.tensorflow.lite.metadata)
     androidTestImplementation("org.testng:testng:6.9.6")
 
 }
