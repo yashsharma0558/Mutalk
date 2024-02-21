@@ -60,28 +60,18 @@ To use Mutalk, follow these steps:
 1) Clone the repository to your local machine using git:
 git clone (https://github.com/yashsharma0558/Mutalk)
 
-3) Open Android Studio and select "Open an existing Android Studio project". Navigate to the cloned repository directory and select it to open the project.
+2) Open Android Studio and select "Open an existing Android Studio project". Navigate to the cloned repository directory and select it to open the project.
 
-4) Wait for the project to build and sync all dependencies.
+3) Wait for the project to build and sync all dependencies.
 
-5) Connect your Android device to your computer and enable USB debugging on the device.
+4) Connect your Android device to your computer and enable USB debugging on the device.
 
-6) In Android Studio, click on the "Run" button to run the app on your device.
+5) In Android Studio, click on the "Run" button to run the app on your device.
 
-That's it! You can now start video calling.
+6) Navigate to the Registration page from Home page and Authenticate using OTP.
 
+7) Select a contact from your contact list and share them a randomly generated room ID through WhatsApp or SMS.
+
+8) That's it! Once your contact joins the room, You can now start video calling. 
 
 Thank you for using Mutalk!
-
-
-
-
-
-
-
-
-
-
-
-
-
