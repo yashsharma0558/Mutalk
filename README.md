@@ -15,7 +15,8 @@ Through secure login procedures, users can trust that their conversations remain
 - Check out our [Demonstration Video]() to see how Mutalk works.
 
 ## Installation
-- To install the app, download the  and install it on your Android device.
+- To install the app, download the APK and install it on your Android device.
+  https://drive.google.com/file/d/1D0dnWWHKUe0a9FB0Vy-fQ9JM3Ui8BuOu/view?usp=sharing
 
 ## Technologies Used
 
