@@ -12,7 +12,11 @@ Through secure login procedures, users can trust that their conversations remain
 - Voice-to-Text for Enhanced Accessibility: Mutalk offers an additional feature of converting spoken words into text, catering to deaf users. This feature ensures inclusivity by allowing all participants to communicate effectively during video calls, regardless of their hearing abilities.
 
 ## Demonstration
-- Check out our [Demonstration Video]() to see how Mutalk works.
+- Check out our [Demonstration Video](https://youtu.be/LQ0HIfuqn-8) to see how Mutalk works.
+
+## FieldWork
+- Our team has visited Vani School and Research Center in Meerut, Uttar Pradesh, India, to interact with mute and deaf individuals.
+  https://drive.google.com/file/d/1u0QNF8U1fLhKXJAKykCJU0aUVryuoDqn/view?usp=sharing
 
 ## Installation
 - To install the app, download the APK and install it on your Android device.
@@ -31,6 +35,7 @@ Through secure login procedures, users can trust that their conversations remain
 - Tensorflow: It is used to create a large-scale neural network with many layers. We have used for machine learning problems which is Image Classification.
 
 - Colab: Colab allowed us to write and execute arbitrary python code through the browser, and is especially well suited to machine learning.
+  https://colab.research.google.com/drive/1C68ITqRVTFYhdOaFBGtEQPpklaWPIRl2?usp=sharing
 
 ## App Previews
 ![work flow](https://github.com/yashsharma0558/Mutalk/assets/114309236/466d930a-55c7-4b38-9ba0-0e359342b627)
@@ -60,28 +65,18 @@ To use Mutalk, follow these steps:
 1) Clone the repository to your local machine using git:
 git clone (https://github.com/yashsharma0558/Mutalk)
 
-3) Open Android Studio and select "Open an existing Android Studio project". Navigate to the cloned repository directory and select it to open the project.
+2) Open Android Studio and select "Open an existing Android Studio project". Navigate to the cloned repository directory and select it to open the project.
 
-4) Wait for the project to build and sync all dependencies.
+3) Wait for the project to build and sync all dependencies.
 
-5) Connect your Android device to your computer and enable USB debugging on the device.
+4) Connect your Android device to your computer and enable USB debugging on the device.
 
-6) In Android Studio, click on the "Run" button to run the app on your device.
+5) In Android Studio, click on the "Run" button to run the app on your device.
 
-That's it! You can now start video calling.
+6) Navigate to the Registration page from Home page and Authenticate using OTP.
 
+7) Select a contact from your contact list and share them a randomly generated room ID through WhatsApp or SMS.
+
+8) That's it! Once your contact joins the room, You can now start video calling with your mute-deaf friend. 
 
 Thank you for using Mutalk!
-
-
-
-
-
-
-
-
-
-
-
-
-
